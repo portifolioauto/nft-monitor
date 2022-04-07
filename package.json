@@ -1,0 +1,23 @@
+{
+  "name": "nft",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "test": "sst test",
+    "start": "sst start --stage dev",
+    "build": "sst build",
+    "deploy": "sst deploy --stage prod",
+    "remove": "sst remove"
+  },
+  "eslintConfig": {
+    "extends": [
+      "serverless-stack"
+    ]
+  },
+  "dependencies": {
+    "@serverless-stack/cli": "0.69.2",
+    "@serverless-stack/resources": "0.69.2",
+    "aws-cdk-lib": "2.15.0",
+    "data-api-client": "^1.2.0"
+  }
+}
