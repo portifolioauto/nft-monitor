@@ -1,6 +1,7 @@
 import AWS from "aws-sdk";
 import client from "data-api-client";
 import fetch from "node-fetch";
+import handler from "./util/handler";
 
 const sns = new AWS.SNS();
 const API = "https://api.opensea.io/api/v1";
@@ -15,7 +16,7 @@ const COLLECTIONS = [
   "criptosocios",
 ];
 
-export async function main(event) {
+export const main = handler(async (event) => {
   const db = getDB(event);
   topicArn = event.topicArn;
 
@@ -39,7 +40,7 @@ export async function main(event) {
     statusCode: 200,
     body: { data: records[0] },
   };
-}
+});
 
 function getDB(event) {
   return client({
