@@ -27,7 +27,7 @@ export async function main(event) {
       },
       Subject: { Data: subject },
     },
-    Source: "csalucasnascimento@gmail.com",
+    Source: "portifolioauto@gmail.com",
   };
 
   await SES.sendEmail(params).promise();
