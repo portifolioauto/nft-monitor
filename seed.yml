@@ -1,2 +1,2 @@
 before_build:
-  - cd frontend && yarn
+  - cd frontend && npm install
