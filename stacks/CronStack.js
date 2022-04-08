@@ -11,7 +11,7 @@ export default class CronStack extends sst.Stack {
 
     // Create Cron Job
     const cron = new sst.Cron(this, "Cron", {
-      schedule: "rate(1 minute)",
+      schedule: "rate(10 minute)",
       job: {
         function: "src/lambda.main",
         jobProps: {
